@@ -1,6 +1,10 @@
+<p align="center">
+  
 # Burger Queen 🍔
 
+<p align="center">
 <img src="readme/Logo.png">
+<p>
 
 ## Experencia de usuario - UX 🔍
 
@@ -11,7 +15,7 @@ La necesidad que satisface es facilitar a los _mesero(a)s_ y _jefes de cocina_ d
 
 ### Paleta de colores
 
-<img src="readme/Paleta de colores.png">
+<img src="readme/Paleta de colores.png" width=450px>
 
 ![Mesero](https://i.picasion.com/pic90/e815211dc543c280a5ae4d9be372793b.gif) ![Jefe](https://i.picasion.com/pic90/48e76b090d9947bb3d5b5f6f2718f67d.gif)
 
@@ -335,3 +339,4 @@ cd burger-queen
 #### Cloud functions
 
 - [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
+<p>

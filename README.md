@@ -8,16 +8,22 @@
 
 ## Experencia de usuario - UX 🔍
 
-El aplicativo web _*BurguerQueen*_ corresponde a un restaurante de comidas rápidas con especialidad en hamburguesas artesanales.
+El aplicativo web _*Burguer Queen*_ corresponde a un restaurante de comidas rápidas con especialidad en hamburguesas artesanales.
 La necesidad que satisface es facilitar a los _mesero(a)s_ y _jefes de cocina_ del restaurante la realización de pedidos, preparación de alimentos y finalmente, servir a las mesas en tiempo real y de manera sincronizada, mediante una tablet que permite la comunicación entre el área de comidas y la cocina.
 
 ## Diseño de Interfaz - UI 🎨
 
 ### Paleta de colores
 
+<p align="center">
 <img src="readme/Paleta de colores.png" width=450px>
+<p>
+
+<p align="center">
 
 ![Mesero](https://i.picasion.com/pic90/e815211dc543c280a5ae4d9be372793b.gif) ![Jefe](https://i.picasion.com/pic90/48e76b090d9947bb3d5b5f6f2718f67d.gif)
+
+<p>
 
 ## Objetivos de aprendizaje
 

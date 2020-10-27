@@ -7,12 +7,12 @@ function IntroView() {
     <div className="Intro-view">
       <body className="Intro-body">
         <div className="Intro-options">
-          <div className="Waiter">
-            <p>Mesero</p>
+          <div>
+            <button className="Waiter">Mesero</button>
           </div>
           <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
-          <div className="Chef">
-            <p>Jefe de cocina</p>
+          <div>
+            <button className="Chef">Jefe de <br></br> cocina</button>
           </div>
         </div>
       </body>

@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./Hamburguesita.png";
-import "../css/Intro.css";
+import "./Intro.scss";
 
 function IntroView() {
   return (
@@ -12,7 +12,9 @@ function IntroView() {
           </div>
           <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
           <div>
-            <button className="Chef">Jefe de <br></br> cocina</button>
+            <button className="Chef">
+              Jefe de <br></br> cocina
+            </button>
           </div>
         </div>
       </body>

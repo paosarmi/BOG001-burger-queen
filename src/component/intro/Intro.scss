@@ -29,6 +29,13 @@ $font-size: 40px;
   font-family: $font-family;
   font-size: $font-size;
   color: $font-color;
+  animation-name: fadeIn;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .Chef {
@@ -40,4 +47,21 @@ $font-size: 40px;
   font-family: $font-family;
   font-size: $font-size;
   color: $font-color;
+  animation-name: fadeIn;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// nombre de los keyframes, duración, timing, Delay

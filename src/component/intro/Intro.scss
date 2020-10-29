@@ -6,14 +6,19 @@ $font-family: "Love Ya Like A Sister", cursive;
 $font-color: #2b1207;
 $font-size: 40px;
 
-.Intro-options {
-  display: flex;
+.Intro-body {
   width: 1024px;
   height: 768px;
+  background: $background;
+  display: flex;
+}
+
+.Intro-options {
+  width: 1024px;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: $background;
 }
 
 .Burguer-logo {

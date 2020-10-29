@@ -1,11 +1,13 @@
 import React from "react";
 import logo from "./Hamburguesita.png";
+import WoodLogo from "../woodLogo/WoodLogo"
 import "./Intro.scss";
 
 function IntroView() {
   return (
     <div className="Intro-view">
       <body className="Intro-body">
+      <WoodLogo/>
         <div className="Intro-options">
           <div>
             <button className="Waiter">Mesero</button>

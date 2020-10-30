@@ -7,10 +7,10 @@ function IntroView() {
   return (
     <div className="Intro-view">
       <body className="Intro-body">
-      <WoodLogo/>
+        <WoodLogo />
         <div className="Intro-options">
           <div>
-            <button className="Waiter">Mesero</button>
+            <button className="Waiter" onClick={() => this.continue()}>Mesero</button>
           </div>
           <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
           <div>
@@ -20,8 +20,12 @@ function IntroView() {
           </div>
         </div>
       </body>
-    </div>
+    </div >
   );
+}
+
+continue () => {
+  this.setState({ redirect: "/waiter" })
 }
 
 export default IntroView;

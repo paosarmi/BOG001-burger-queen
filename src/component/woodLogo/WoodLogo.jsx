@@ -4,8 +4,7 @@ import "./WoodLogo.scss";
 
 function WoodLogo() {
     return (
-       
-        <img src={wood} alt="Loguito" className="Logo-header"/>
-      
-    )}
+        <img src={wood} alt="Loguito" className="Logo-header" />
+    )
+}
 export default WoodLogo;

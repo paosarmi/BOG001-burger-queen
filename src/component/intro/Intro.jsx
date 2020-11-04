@@ -2,8 +2,23 @@ import React from "react";
 import logo from "./Hamburguesita.png";
 import WoodLogo from "../woodLogo/WoodLogo"
 import "./Intro.scss";
+import { Redirect } from 'react-router-dom'
+var ReactDOM = require('react-dom');
 
-function IntroView() {
+
+class IntroView extends React.Component {
+
+constructor(props){
+  super(props)
+  this.state = { 
+    redirect: false 
+};
+}
+
+render() {
+  if (this.state.redirect) {
+    return <Redirect to={this.state.redirect} />
+  }
   return (
     <div className="Intro-view">
       <body className="Intro-body">
@@ -14,7 +29,7 @@ function IntroView() {
           </div>
           <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
           <div>
-            <button className="Chef">
+            <button className="Chef" onClick={() => this.continue()}>
               Jefe de <br></br> cocina
             </button>
           </div>
@@ -22,10 +37,13 @@ function IntroView() {
       </body>
     </div >
   );
+  }
+  continue () {
+    this.setState({ redirect: "/waiter"})
+  }
 }
 
-continue () => {
-  this.setState({ redirect: "/waiter" })
-}
+
+
 
 export default IntroView;

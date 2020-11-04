@@ -10,7 +10,7 @@ function WaiterOption(props) {
                 <WoodLogo />
                 <div className="Names-Waiters">
                     <div>
-                        <button className="Waiter"> Nombre </button>
+                        <button > Volver </button>
                     </div>
                 </div>
             </body>

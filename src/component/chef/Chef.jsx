@@ -1,10 +1,10 @@
 import React from "react";
 import WoodLogo from "../woodLogo/WoodLogo"
-import "./Waiter.scss";
+import "./Chef.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
-class WaiterOption extends React.Component {
+class ChefOption extends React.Component {
 
     constructor(props) {
         super(props)
@@ -33,4 +33,4 @@ class WaiterOption extends React.Component {
         this.setState({ redirect: "/" })
     }
 }
-export default WaiterOption;
+export default ChefOption;

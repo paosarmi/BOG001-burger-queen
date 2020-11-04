@@ -7,11 +7,15 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/waiter">
+        <Route path="/chef">
           <WaiterOption />
         </Route>
-        <Route path="/">
+        <Route path="/waiter" component={WaiterOption} />
+        <Route path="/" exact>
           <Intro />
+        </Route>
+        <Route>
+          <div>Has perdido tu hamburguesa.</div>
         </Route>
       </Switch>
     </Router>

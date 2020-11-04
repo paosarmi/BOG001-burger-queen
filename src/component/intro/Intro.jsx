@@ -8,38 +8,41 @@ var ReactDOM = require('react-dom');
 
 class IntroView extends React.Component {
 
-constructor(props){
-  super(props)
-  this.state = { 
-    redirect: false 
-};
-}
+  constructor(props) {
+    super(props)
+    this.state = {
+      redirect: false
+    };
+  }
 
-render() {
-  if (this.state.redirect) {
-    return <Redirect to={this.state.redirect} />
-  }
-  return (
-    <div className="Intro-view">
-      <body className="Intro-body">
-        <WoodLogo />
-        <div className="Intro-options">
-          <div>
-            <button className="Waiter" onClick={() => this.continue()}>Mesero</button>
-          </div>
-          <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
-          <div>
-            <button className="Chef" onClick={() => this.continue()}>
-              Jefe de <br></br> cocina
+  render() {
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
+    return (
+      <div className="Intro-view">
+        <body className="Intro-body">
+          <WoodLogo />
+          <div className="Intro-options">
+            <div>
+              <button className="Waiter" onClick={() => this.waiter()}>Mesero</button>
+            </div>
+            <img src={logo} className="Burguer-logo" alt="Hamburguesita" />
+            <div>
+              <button className="Chef" onClick={() => this.chef()}>
+                Jefe de <br></br> cocina
             </button>
+            </div>
           </div>
-        </div>
-      </body>
-    </div >
-  );
+        </body>
+      </div >
+    );
   }
-  continue () {
-    this.setState({ redirect: "/waiter"})
+  waiter() {
+    this.setState({ redirect: "/waiter" })
+  }
+  chef() {
+    this.setState({ redirect: "/chef" })
   }
 }
 

@@ -1,19 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./ListWaiter.scss";
 import WaiterOption from "../waiter/Waiter"
 
 
-function WaiterPersons() {
+function WaiterPersons(props) {
     return (
-
-        <div>
-            <button className="Waiter">
-                <WaiterOption person="Ramsay Snow" />
-                <WaiterOption person="Ygritte Snow" />
-                <WaiterOption person="John Snow" />
-                <WaiterOption person="Gendry Baratheon" />
-            </button>
-        </div>
+        <Fragment>
+            <button className="Waiter-name">{props.person}</button>
+        </Fragment>
     );
 }
 

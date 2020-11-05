@@ -1,6 +1,7 @@
 import React from "react";
 import WoodLogo from "../woodLogo/WoodLogo"
 import "./Waiter.scss";
+import ListWaiter from "../listWaiters/ListWaiter"
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
@@ -17,15 +18,21 @@ class WaiterOption extends React.Component {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <div className="View-waiters">
-                <body className="Options-waiters">
+            <div className="Waiters">
+                <div className="Intro-body">
                     <WoodLogo />
                     <div className="Names-Waiters">
                         <div>
                             <button onClick={() => this.home()}> Volver </button>
                         </div>
+                        <div className="PersonWaiter">
+                            <ListWaiter person="Ramsay Snow" />
+                            <ListWaiter person="Ygritte Snow" />
+                            <ListWaiter person="John Snow" />
+                            <ListWaiter person="Gendry Baratheon" />
+                        </div>
                     </div>
-                </body>
+                </div>
             </div >
         );
     }
@@ -34,3 +41,4 @@ class WaiterOption extends React.Component {
     }
 }
 export default WaiterOption;
+

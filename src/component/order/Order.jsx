@@ -1,6 +1,7 @@
 import React from 'react'
 import WoodLogo from "../woodLogo/WoodLogo";
 import BackButton from "../backButton/BackButton";
+import Menu from "../../menu.json";
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');

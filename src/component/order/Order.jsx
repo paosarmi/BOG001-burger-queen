@@ -20,6 +20,7 @@ class ClientOrder extends React.Component {
         }
         return (
             <div>
+
                 <h1>Estos son los pedidos :)</h1>
             </div>
         );

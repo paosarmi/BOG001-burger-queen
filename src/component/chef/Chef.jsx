@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import WoodLogo from "../woodLogo/WoodLogo";
 import "./Chef.scss";
-import ChefButton from "../chefButton/ChefButton";
+import ListChef from "../listChef/ListChef";
 import BackButton from "../backButton/BackButton";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
@@ -27,8 +27,8 @@ class ChefOption extends React.Component {
                             <BackButton path="/" />
                         </div>
                         <div className="PersonChef">
-                            <ChefButton person="Yara Greyjoy" />
-                            <ChefButton person="Melisandre Red" />
+                            <ListChef person="Yara Greyjoy" />
+                            <ListChef person="Melisandre Red" />
                         </div>
                     </div>
                 </div >
@@ -38,5 +38,6 @@ class ChefOption extends React.Component {
     home() {
         this.setState({ redirect: "/" })
     }
+
 }
 export default ChefOption;

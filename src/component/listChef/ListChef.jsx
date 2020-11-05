@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import "./ListWaiter.scss";
+import "./ListChef.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
-class WaiterPersons extends React.Component {
+class PersonChef extends React.Component {
 
     constructor(props) {
         super(props)
@@ -17,14 +17,13 @@ class WaiterPersons extends React.Component {
         }
         return (
             <Fragment>
-                <button className="Waiter-name" onClick={() => this.order()}>{this.props.person}</button>
+                <button className="Chef-name" onClick={() => this.kitchen()}>{this.props.person}</button>
             </Fragment>
         );
     }
 
-    order() {
-        this.setState({ redirect: "/order" })
+    kitchen() {
+        this.setState({ redirect: "/kitchen" })
     }
 }
-
-export default WaiterPersons;
+export default PersonChef;

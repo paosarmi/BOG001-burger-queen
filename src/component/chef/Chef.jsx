@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import WoodLogo from "../woodLogo/WoodLogo"
 import "./Chef.scss";
 import { Redirect } from 'react-router-dom'
@@ -17,7 +17,7 @@ class ChefOption extends React.Component {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <div className="Chefs">
+            <Fragment className="Chefs">
                 <div className="Intro-body">
                     <WoodLogo />
                     <div className="Options-chef">
@@ -30,7 +30,7 @@ class ChefOption extends React.Component {
                         </div>
                     </div>
                 </div >
-            </div>
+            </Fragment>
         );
     }
     home() {

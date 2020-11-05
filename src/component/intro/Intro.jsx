@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import logo from "./Hamburguesita.png";
 import WoodLogo from "../woodLogo/WoodLogo"
 import "./Intro.scss";

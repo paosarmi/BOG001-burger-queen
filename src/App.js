@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import WaiterOption from "./component/waiter/Waiter";
 import ChefOption from "./component/chef/Chef";
 import Intro from "./component/intro/Intro";
-import ChefOption from "./component/chef/Chef";
 import NotFound from "./component/notFound/NotFound";
 
 export default function App() {

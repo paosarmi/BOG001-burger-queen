@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./ListWaiter.scss";
-import WaiterOption from "../waiter/Waiter"
+
 
 
 function WaiterPersons(props) {

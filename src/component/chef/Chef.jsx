@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
-import WoodLogo from "../woodLogo/WoodLogo"
+import WoodLogo from "../woodLogo/WoodLogo";
 import "./Chef.scss";
+import ChefButton from "../chefButton/ChefButton";
+import BackButton from "../backButton/BackButton";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
@@ -17,20 +19,20 @@ class ChefOption extends React.Component {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <Fragment className="Chefs">
+            <div className="Chefs">
                 <div className="Intro-body">
                     <WoodLogo />
                     <div className="Options-chef">
                         <div>
-                            <button onClick={() => this.home()}> Volver </button>
+                            <BackButton path="/" />
                         </div>
                         <div className="PersonChef">
-                            <listChef person="Yara Greyjoy" />
-                            <listChef person="Yara Greyjoy" />
+                            <ChefButton person="Yara Greyjoy" />
+                            <ChefButton person="Melisandre Red" />
                         </div>
                     </div>
                 </div >
-            </Fragment>
+            </div>
         );
     }
     home() {

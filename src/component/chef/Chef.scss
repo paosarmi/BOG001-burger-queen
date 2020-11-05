@@ -10,4 +10,9 @@ $font-size: 40px;
   width: 1024px;
   height: 768px;
   background-image: url(./fondococina.png);
+  background-color: $background;
+}
+
+.Options-chef {
+  overflow-y: hidden;
 }

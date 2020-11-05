@@ -2,6 +2,7 @@ import React from "react";
 import WoodLogo from "../woodLogo/WoodLogo"
 import "./Waiter.scss";
 import ListWaiter from "../listWaiters/ListWaiter"
+import BackButton from "../backButton/BackButton";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
@@ -23,7 +24,7 @@ class WaiterOption extends React.Component {
                     <WoodLogo />
                     <div className="Names-Waiters">
                         <div>
-                            <button onClick={() => this.home()}> Volver </button>
+                            <BackButton path="/" />
                         </div>
                         <div className="PersonWaiter">
                             <ListWaiter person="Ramsay Snow" />

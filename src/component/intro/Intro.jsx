@@ -21,7 +21,7 @@ class IntroView extends React.Component {
     }
     return (
       <div className="Intro-view">
-        <body className="Intro-body">
+        <div className="Intro-body">
           <WoodLogo />
           <div className="Intro-options">
             <div>
@@ -34,7 +34,7 @@ class IntroView extends React.Component {
             </button>
             </div>
           </div>
-        </body>
+        </div>
       </div >
     );
   }

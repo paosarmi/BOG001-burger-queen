@@ -17,16 +17,20 @@ class ChefOption extends React.Component {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <div className="View-waiters">
-                <body className="Options-waiters">
+            <div className="Chefs">
+                <div className="Intro-body">
                     <WoodLogo />
-                    <div className="Names-Waiters">
+                    <div className="Options-chef">
                         <div>
                             <button onClick={() => this.home()}> Volver </button>
                         </div>
+                        <div className="PersonChef">
+                            <listChef person="Yara Greyjoy" />
+                            <listChef person="Yara Greyjoy" />
+                        </div>
                     </div>
-                </body>
-            </div >
+                </div >
+            </div>
         );
     }
     home() {

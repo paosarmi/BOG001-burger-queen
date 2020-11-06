@@ -1,8 +1,8 @@
 import React from 'react'
 import WoodLogo from "../woodLogo/WoodLogo";
 import BackButton from "../backButton/BackButton";
-import Menu from "../../menu.json";
-import ProductsMenu from "../menu/Menu"
+import MenuJson from "../../menu.json";
+import MenuOrder from "../menu/Menu";
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
@@ -22,7 +22,7 @@ class ClientOrder extends React.Component {
         return (
             <div>
                 <button className="Breakfast">Queen breakfast</button>
-                <Menu />
+                <MenuOrder />
                 <button className="Lunch">Queen Lunch</button>
             </div>
         );

@@ -2,6 +2,7 @@ import React from 'react'
 import WoodLogo from "../woodLogo/WoodLogo";
 import BackButton from "../backButton/BackButton";
 import Menu from "../../menu.json";
+import ProductsMenu from "../menu/Menu"
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
@@ -20,8 +21,9 @@ class ClientOrder extends React.Component {
         }
         return (
             <div>
-
-                <h1>Estos son los pedidos :)</h1>
+                <button className="Breakfast">Queen breakfast</button>
+                <Menu />
+                <button className="Lunch">Queen Lunch</button>
             </div>
         );
     }

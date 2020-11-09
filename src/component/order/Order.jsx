@@ -13,8 +13,13 @@ class ClientOrder extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            redirect: false
+            redirect: false,
+            showBreakfast: false,
+            showLunch: false
         };
+
+
+
     }
     render() {
         if (this.state.redirect) {
@@ -25,15 +30,43 @@ class ClientOrder extends React.Component {
                 <div className="Intro-body">
                     <WoodLogo />
                     <div>
-                        <button className="OptionMenu">Queen breakfast</button>
-                        <MenuQueenBreakfast />
-                        <button className="OptionMenu">Queen Lunch</button>
-                        <MenuQueenLunch />
+
+                        <button className="OptionMenu" onClick={() => this.displayBreakfast()}>Queen breakfast</button>
+                        <button className="OptionMenu" onClick={() => this.displayLunch()}>Queen Lunch</button>
+                        {
+                            this.state.showBreakfast ?
+                                <div>
+                                    <MenuQueenBreakfast />
+                                </div>
+                                : null
+                        }
+                        {
+                            this.state.showLunch ?
+                                <div>
+                                    <MenuQueenLunch />
+                                </div>
+                                : null
+                        }
+
                     </div>
                 </div>
             </div>
         );
     }
+
+    displayBreakfast() {
+        this.setState({
+            showBreakfast: true,
+            showLunch: false
+        })
+    }
+    displayLunch() {
+        this.setState({
+            showLunch: true,
+            showBreakfast: false
+        })
+    }
+
     home() {
         this.setState({ redirect: "/" })
     }

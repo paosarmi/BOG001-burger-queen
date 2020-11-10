@@ -29,7 +29,7 @@ class ClientOrder extends React.Component {
             <div className="Waiters">
                 <div className="Intro-body">
                     <WoodLogo />
-                    <div>
+                    <div className="MenuButtons">
 
                         <button className="OptionMenu" onClick={() => this.displayBreakfast()}>Queen breakfast</button>
                         <button className="OptionMenu" onClick={() => this.displayLunch()}>Queen Lunch</button>

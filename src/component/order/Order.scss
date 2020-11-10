@@ -1,3 +1,18 @@
+$font-family: "Love Ya Like A Sister", cursive;
+$button-color: #f6ab52;
 .OptionMenu {
-  background-color: aqua;
+  background-color: $button-color;
+  font-family: $font-family;
+  width: 270px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 30px;
+  border: 3px solid $button-color;
+  /*  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.MenuButtons {
+  display: flex;
 }

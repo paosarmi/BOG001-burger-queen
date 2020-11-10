@@ -6,7 +6,7 @@ const MenuQueenBreakfast = () => {
 
     return (
         <div>
-            <div>
+            <div className="Items-container">
                 {
                     Menu.queenBreakfast.bebidas.map(item => (
                         <button className="Item" >{item.product}-{item.price} </button>

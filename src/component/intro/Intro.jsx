@@ -22,7 +22,7 @@ class IntroView extends React.Component {
     return (
       <div className="Intro-view">
         <div className="Intro-body">
-          <WoodLogo />
+          <WoodLogo hasAnimation={true} />
           <div className="Intro-options">
             <div>
               <button className="Waiter" onClick={() => this.waiter()}>Mesero</button>

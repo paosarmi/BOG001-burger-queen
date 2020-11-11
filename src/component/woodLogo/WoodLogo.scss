@@ -1,12 +1,21 @@
 $logo-size-mw: 466px;
 $logo-size-mh: 194px;
+$logo-size-sw: 341px;
+$logo-size-sh: 133px;
+$margine-logo-m: 279px;
 
 .Logo-header {
-  height: $logo-size-mh;
-  width: $logo-size-mw;
+  height: $logo-size-sh;
+  width: $logo-size-sw;
   position: absolute;
   top: 0;
-  margin-left: 279px;
+  margin-left: 341px;
+}
+
+.logoAnimation {
+  height: $logo-size-mh;
+  width: $logo-size-mw;
+  margin-left: $margine-logo-m;
   animation-name: fadeIn;
   animation-delay: 1s;
   animation-duration: 3s;

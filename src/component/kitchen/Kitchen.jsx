@@ -19,7 +19,7 @@ class KitchenOrder extends React.Component {
         }
         return (
             <div>
-                <h1>Esta es la cocina :)</h1>
+                <h1>Esta es la cocina :D</h1>
             </div>
         );
     }

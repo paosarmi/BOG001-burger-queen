@@ -4,6 +4,7 @@ import BackButton from "../backButton/BackButton";
 import MenuJson from "../../menu.json";
 import MenuQueenBreakfast from "../menuQueenBreakfast/MenuQueenBreakfast";
 import MenuQueenLunch from "../menuQueenLunch/MenuQueenLunch";
+import OrderDetail from "../orderDetail/OderDetail"
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
@@ -48,7 +49,9 @@ class ClientOrder extends React.Component {
                                 </div>
                                 : null
                         }
-
+                    </div>
+                    <div className="Total-order">
+                        <OrderDetail />
                     </div>
                 </div>
             </div>

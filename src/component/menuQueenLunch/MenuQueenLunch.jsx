@@ -8,8 +8,8 @@ const MenuQueenLunch = () => {
         <div>
             <div className="Lunch-container">
                 <div>
-                    <h1>Hamburguesas</h1>
-                    <br />
+                    {/* <h1>Hamburguesas</h1>
+                    <br /> */}
                     <h2>Hamburguesa Simple</h2>
                 </div>
                 <div className="Title-items">

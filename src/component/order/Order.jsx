@@ -18,10 +18,8 @@ class ClientOrder extends React.Component {
             showBreakfast: false,
             showLunch: false
         };
-
-
-
     }
+
     render() {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect} />
@@ -49,6 +47,9 @@ class ClientOrder extends React.Component {
                                 </div>
                                 : null
                         }
+                        <div>
+                            <BackButton path="/waiter" />
+                        </div>
                     </div>
                     <div className="Total-order">
                         <OrderDetail />
@@ -57,7 +58,6 @@ class ClientOrder extends React.Component {
             </div>
         );
     }
-
     displayBreakfast() {
         this.setState({
             showBreakfast: true,

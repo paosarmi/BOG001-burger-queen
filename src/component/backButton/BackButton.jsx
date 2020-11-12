@@ -19,7 +19,7 @@ class BackPreviousPage extends React.Component {
         }
         return (
             <Fragment>
-                <div className="">
+                <div className="Back-button-container">
                     <button className="Back-button" onClick={() => this.goTo(this.path)}> Volver </button>
                 </div>
             </Fragment>

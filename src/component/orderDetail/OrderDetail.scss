@@ -3,6 +3,8 @@ $font-color: #fffaed;
 $background-total: rgba(43, 38, 67, 0.85);
 $width-container: 330px;
 $height-container: 480px;
+$font-family: "Love Ya Like A Sister", cursive;
+$font-button: #2b1207;
 
 .Order-detail-container {
   display: flex;
@@ -29,8 +31,29 @@ $height-container: 480px;
 .Order-total-container {
   display: flex;
   flex-direction: column;
-  margin: 0 0 15px 20px;
+  margin: 0 20px 15px 20px;
   font-size: 20px;
   color: $font-color;
   overflow-y: hidden;
+  border-top: $border-color solid 1px;
+}
+
+.Submit-container {
+  display: flex;
+  margin: 0 0 15px 30px;
+}
+
+.Submit-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $border-color;
+  width: 270px;
+  height: 49px;
+  border-radius: 50px;
+  border: 2px solid $border-color;
+  font-size: 28px;
+  color: $font-button;
+  font-family: $font-family;
 }

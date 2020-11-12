@@ -2,7 +2,6 @@ import React from 'react'
 import "./OrderDetail.scss";
 
 function OrderDetail() {
-    console.log()
     return (
         <div className="Order-detail-container">
             <div className="Order-products-container">
@@ -11,7 +10,10 @@ function OrderDetail() {
             <div className="Order-total-container">
                 <p>Total    5</p>
             </div>
-        </div>
+            <div className="Submit-container">
+                <button className="Submit-order">Enviar a cocina</button>
+            </div >
+        </div >
     )
 }
 export default OrderDetail;

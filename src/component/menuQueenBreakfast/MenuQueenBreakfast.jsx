@@ -12,26 +12,23 @@ const MenuQueenBreakfast = () => {
     const [product, setProduct] = useState(initialStateProduct);
 
     const orderDetailChange = eventAfterChange => {
-        const { name, value } = eventAfterChange.target;
+        const { product, price } = eventAfterChange.target.dataset;
 
-        console.log(name, value);
+        console.log(product, price);
     }
 
-    const submitOrderDetail = eventChangeSubmit => {
-        console.log(product);
-    }
 
     return (
         <div>
             <div className="Items-container">
                 {
                     Menu.queenBreakfast.bebidas.map(item => (
-                        <button className="Item" onClick={orderDetailChange} >{item.product}-{item.price} </button>
+                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>{item.product}-{item.price} </button>
                     ))
                 }
                 {
                     Menu.queenBreakfast.sandwich.map(item => (
-                        <button className="Item" onClick={orderDetailChange} >{item.product}-{item.price} </button>
+                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>{item.product}-{item.price} </button>
                     ))
                 }
             </div>

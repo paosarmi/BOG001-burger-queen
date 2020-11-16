@@ -23,14 +23,14 @@ class WaiterOption extends React.Component {
                 <div className="Intro-body">
                     <WoodLogo />
                     <div className="Names-Waiters">
-                        <div>
-                            <BackButton path="/" />
-                        </div>
                         <div className="PersonWaiter">
                             <ListWaiter person="Ramsay Snow" />
                             <ListWaiter person="Ygritte Snow" />
                             <ListWaiter person="John Snow" />
                             <ListWaiter person="Gendry Baratheon" />
+                        </div>
+                        <div>
+                            <BackButton path="/" />
                         </div>
                     </div>
                 </div>

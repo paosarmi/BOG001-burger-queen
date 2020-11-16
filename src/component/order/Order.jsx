@@ -15,7 +15,7 @@ class ClientOrder extends React.Component {
         super(props)
         this.state = {
             redirect: false,
-            showBreakfast: false,
+            showBreakfast: true,
             showLunch: false
         };
     }

@@ -16,9 +16,15 @@ class ClientOrder extends React.Component {
         this.state = {
             redirect: false,
             showBreakfast: true,
-            showLunch: false
+            showLunch: false,
+            //prueba: {}
         };
     }
+
+    /*manejadorDePrueba(producto) {
+        this.state.prueba = producto;
+        console.log(this.state.prueba);
+    }*/
 
     render() {
         if (this.state.redirect) {
@@ -37,6 +43,7 @@ class ClientOrder extends React.Component {
                             this.state.showBreakfast ?
                                 <div>
                                     <MenuQueenBreakfast />
+                                    {/* pruebaProducto={this.manejadorDePrueba} */}
                                 </div>
                                 : null
                         }

@@ -1,4 +1,5 @@
 import React from 'react';
+import OrderTable from "../orderTable/OrderTable"
 import "./OrderDetail.scss";
 import { Redirect } from 'react-router-dom'
 
@@ -17,7 +18,7 @@ class OrderDetail extends React.Component {
         return (
             <div className="Order-detail-container">
                 <div className="Order-products-container">
-                    <p>Cafe américano    1    $5</p>
+                    <OrderTable />
                 </div>
                 <div className="Order-total-container">
                     <p>Total    5</p>

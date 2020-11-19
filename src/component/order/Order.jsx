@@ -19,9 +19,13 @@ class ClientOrder extends React.Component {
             showBreakfast: true,
             showLunch: false,
             showModal: false,
-            showOrder: []
+            showOrder: [],
+            orderList: []
         };
+        this.addToOrder = this.addToOrder.bind(this);
     }
+
+
 
     render() {
         if (this.state.redirect) {
@@ -39,7 +43,7 @@ class ClientOrder extends React.Component {
                         {
                             this.state.showBreakfast ?
                                 <div>
-                                    <MenuQueenBreakfast updateItemProducts={this.updateProduct} />
+                                    <MenuQueenBreakfast updateItemProducts={this.updateProduct} addToOrder={this.addToOrder} />
                                 </div>
                                 : null
                         }
@@ -55,7 +59,7 @@ class ClientOrder extends React.Component {
                         </div>
                     </div>
                     <div className="Total-order">
-                        <OrderDetail showModal={this.displayModal} />
+                        <OrderDetail showModal={this.displayModal} orderList={this.state.orderList} />
                     </div>
                     <div>
                         <ModalWindowWaiter />
@@ -82,14 +86,26 @@ class ClientOrder extends React.Component {
         console.log("displayModal");
     }
     updateProduct = () => {
-        this.setState(previousState => ({
+        /* this.setState(previousState => ({
             showOrder: [
                 ...previousState.showOrder,
-                { producto: "algo", precio: "1000" }
+                { producto: { product }, precio: { price } }
             ]
-        }))
+        })) */
 
 
+    }
+
+    addToOrder(product, price) {
+        let _order = this.state.orderList;
+        _order.push({ product, price })
+        //TODO agregar cantidad del producto al arreglo segun esta condiciones
+        // Si NO hay otro producto igual en el orderList, se agrega el prodcuto con cantidad  en 1
+        // De lo contrario, si HAY otro producto igual en el orderList, no se agrega uno nuevo y 
+        // en su lugar se aumenta la cantidad +1 orderList[index].quantity++
+        this.setState({
+            orderList: _order
+        });
     }
 
     home() {

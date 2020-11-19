@@ -5,11 +5,12 @@ import { Redirect } from 'react-router-dom'
 
 class OrderDetail extends React.Component {
 
-    orderList = [1, 2, 3]
+
     constructor(props) {
         super(props)
         this.state = {
             redirect: false,
+            orderList: this.props.orderList
         };
     }
 
@@ -24,7 +25,7 @@ class OrderDetail extends React.Component {
 
             <div className="Order-detail-container">
                 <div className="Order-products-container">
-                    <OrderTable orderList={this.orderList} />
+                    <OrderTable orderList={this.state.orderList} />
                 </div>
                 <div className="Order-total-container">
                     <p>Total    5</p>

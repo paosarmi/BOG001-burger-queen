@@ -3,7 +3,7 @@ import Menu from "../../menu.json";
 import "./MenuQueenBreakfast.scss";
 
 
-const MenuQueenBreakfast = (props) => {
+const MenuQueenBreakfast = ({ addToOrder }) => {
 
     const initialStateProduct = {
         product: " ",
@@ -13,8 +13,8 @@ const MenuQueenBreakfast = (props) => {
 
     const orderDetailChange = eventAfterChange => {
         const { product, price } = eventAfterChange.target.dataset;
-        console.log(product, price);
-        props.updateItemProducts()
+        setProduct(product, price);
+        addToOrder(product, price);
     }
 
 

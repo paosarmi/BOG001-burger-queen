@@ -15,13 +15,13 @@ const OrderTable = ({ orderList }) => {
                 orderList.map(item => (
                     <div className="ItemTableContainer">
                         <div className="Product">
-                            <p>Producto  </p>
+                            <p>{item.product}  </p>
                         </div>
                         <div className="Quantity">
                             <p>1</p>
                         </div>
                         <div className="Price">
-                            <p>...$5</p>
+                            <p>...{item.price}</p>
                         </div>
                     </div>))
             }

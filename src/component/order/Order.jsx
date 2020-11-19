@@ -5,6 +5,7 @@ import MenuJson from "../../menu.json";
 import MenuQueenBreakfast from "../menuQueenBreakfast/MenuQueenBreakfast";
 import MenuQueenLunch from "../menuQueenLunch/MenuQueenLunch";
 import OrderDetail from "../orderDetail/OderDetail"
+import ModalWindowWaiter from "../modalWindow/ModalWindow"
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
 var ReactDOM = require('react-dom');
@@ -17,6 +18,7 @@ class ClientOrder extends React.Component {
             redirect: false,
             showBreakfast: true,
             showLunch: false,
+            showModal: false
             //prueba: {}
         };
     }
@@ -59,7 +61,10 @@ class ClientOrder extends React.Component {
                         </div>
                     </div>
                     <div className="Total-order">
-                        <OrderDetail />
+                        <OrderDetail showModal={this.displayModal} />
+                    </div>
+                    <div>
+                        <ModalWindowWaiter />
                     </div>
                 </div>
             </div>
@@ -68,14 +73,20 @@ class ClientOrder extends React.Component {
     displayBreakfast() {
         this.setState({
             showBreakfast: true,
-            showLunch: false
+            showLunch: false,
+            showModal: false
         })
     }
     displayLunch() {
         this.setState({
             showLunch: true,
-            showBreakfast: false
+            showBreakfast: false,
+            showModal: false
         })
+    }
+    displayModal() {
+        console.log("displayModal");
+
     }
 
     home() {

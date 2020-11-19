@@ -14,7 +14,7 @@ const MenuQueenBreakfast = (props) => {
     const orderDetailChange = eventAfterChange => {
         const { product, price } = eventAfterChange.target.dataset;
         console.log(product, price);
-        //props.pruebaProducto({ product, price });
+        props.updateItemProducts()
     }
 
 

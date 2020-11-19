@@ -18,15 +18,10 @@ class ClientOrder extends React.Component {
             redirect: false,
             showBreakfast: true,
             showLunch: false,
-            showModal: false
-            //prueba: {}
+            showModal: false,
+            showOrder: []
         };
     }
-
-    /*manejadorDePrueba(producto) {
-        this.state.prueba = producto;
-        console.log(this.state.prueba);
-    }*/
 
     render() {
         if (this.state.redirect) {
@@ -44,8 +39,7 @@ class ClientOrder extends React.Component {
                         {
                             this.state.showBreakfast ?
                                 <div>
-                                    <MenuQueenBreakfast />
-                                    {/* pruebaProducto={this.manejadorDePrueba} */}
+                                    <MenuQueenBreakfast updateItemProducts={this.updateProduct} />
                                 </div>
                                 : null
                         }
@@ -86,6 +80,15 @@ class ClientOrder extends React.Component {
     }
     displayModal() {
         console.log("displayModal");
+    }
+    updateProduct = () => {
+        this.setState(previousState => ({
+            showOrder: [
+                ...previousState.showOrder,
+                { producto: "algo", precio: "1000" }
+            ]
+        }))
+
 
     }
 

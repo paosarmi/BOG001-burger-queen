@@ -19,7 +19,6 @@ class ClientOrder extends React.Component {
             showBreakfast: true,
             showLunch: false,
             showModal: false,
-            showOrder: [],
             orderList: []
         };
         this.addToOrder = this.addToOrder.bind(this);
@@ -43,7 +42,7 @@ class ClientOrder extends React.Component {
                         {
                             this.state.showBreakfast ?
                                 <div>
-                                    <MenuQueenBreakfast updateItemProducts={this.updateProduct} addToOrder={this.addToOrder} />
+                                    <MenuQueenBreakfast addToOrder={this.addToOrder} />
                                 </div>
                                 : null
                         }
@@ -84,16 +83,6 @@ class ClientOrder extends React.Component {
     }
     displayModal() {
         console.log("displayModal");
-    }
-    updateProduct = () => {
-        /* this.setState(previousState => ({
-            showOrder: [
-                ...previousState.showOrder,
-                { producto: { product }, precio: { price } }
-            ]
-        })) */
-
-
     }
 
     addToOrder(product, price) {

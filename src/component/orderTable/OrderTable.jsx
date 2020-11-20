@@ -5,9 +5,9 @@ import "./OrderTable.scss";
 
 const OrderTable = ({ orderList }) => {
 
-    const addProduct = () => {
+    /* const addProduct = () => {
         console.log("Producto")
-    }
+    } */
 
     return (
         <div>

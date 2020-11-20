@@ -17,7 +17,6 @@ const MenuQueenBreakfast = ({ addToOrder }) => {
         addToOrder(product, price);
     }
 
-
     return (
         <div>
             <div className="Items-container">

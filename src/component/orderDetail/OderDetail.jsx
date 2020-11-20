@@ -18,6 +18,7 @@ class OrderDetail extends React.Component {
     addToOrderList(order) {
         this.orderList.push(order);
     }
+
     render() {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect} />
@@ -32,7 +33,7 @@ class OrderDetail extends React.Component {
                     <p>Total    5</p>
                 </div>
                 <div className="Submit-container">
-                    <button className="Submit-order" onClick={this.props.showModal}>Enviar a cocina</button>
+                    <button className="Submit-order" onClick={this.showModal}>Enviar a cocina</button>
                 </div >
             </div >
 

@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { db } from "../../firebase";
-import Breakfast from "../menuQueenBreakfast/MenuQueenBreakfast"
+import TrashBucket from "../trashBucket/TrashBucket"
 import "./OrderTable.scss";
 
 const OrderTable = ({ orderList }) => {
 
-    /* const addProduct = () => {
-        console.log("Producto")
-    } */
-
+    //useEffect()
     return (
         <div>
             {
@@ -22,6 +19,9 @@ const OrderTable = ({ orderList }) => {
                         </div>
                         <div className="Price">
                             <p>...{item.price}</p>
+                        </div>
+                        <div>
+                            <TrashBucket />
                         </div>
                     </div>))
             }

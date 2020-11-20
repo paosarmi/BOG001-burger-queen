@@ -1,4 +1,5 @@
 import React from "react";
+import { db } from "../../firebase";
 import "./ModalWindow.scss";
 
 const ModalWindowWaiter = ({ handleClose, show }) => {
@@ -6,6 +7,11 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
     const waiterModal = () => {
         console.log("ventana modal")
+    }
+
+    const sendOrder = (order) => {
+        db.collection("orderCollection").add(order)
+        //this.state.orderList = [];
     }
 
     return (
@@ -26,7 +32,7 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
                             Resumen de pedido
                     </p>
                     </div>
-                    <button>Click</button>
+                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })} >Click</button>
                     <button>Click</button>
                 </div>
             </div>

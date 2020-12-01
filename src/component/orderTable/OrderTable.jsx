@@ -6,19 +6,30 @@ import "./OrderTable.scss";
 const OrderTable = ({ orderList }) => {
 
     const addProduct = () => {
-        //useEffect()
         console.log("Producto");
     }
+
+    const quantityProduct = () => {
+        if (item.product !== item.product) {
+            quantity == 1
+            console.log("No existe")
+        }
+        else {
+            quantity = + quantity
+            console.log("Existe")
+        }
+    }
+
     return (
         <div>
             {
                 orderList.map(item => (
                     <div className="ItemTableContainer">
                         <div className="Product">
-                            <p>{item.product}  </p>
+                            <p>{item.product}}  </p>
                         </div>
                         <div className="Quantity">
-                            <p>1</p>
+                            <p>{quantityProduct}</p>
                         </div>
                         <div className="Price">
                             <p>...{item.price}</p>

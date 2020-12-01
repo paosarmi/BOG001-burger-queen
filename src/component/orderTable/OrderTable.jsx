@@ -5,7 +5,10 @@ import "./OrderTable.scss";
 
 const OrderTable = ({ orderList }) => {
 
-    //useEffect()
+    const addProduct = () => {
+        //useEffect()
+        console.log("Producto");
+    }
     return (
         <div>
             {
@@ -29,4 +32,5 @@ const OrderTable = ({ orderList }) => {
 
     )
 }
+
 export default OrderTable;

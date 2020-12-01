@@ -4,7 +4,7 @@ import BackButton from "../backButton/BackButton";
 import MenuJson from "../../menu.json";
 import MenuQueenBreakfast from "../menuQueenBreakfast/MenuQueenBreakfast";
 import MenuQueenLunch from "../menuQueenLunch/MenuQueenLunch";
-import OrderDetail from "../orderDetail/OderDetail"
+import OrderDetail from "../orderDetail/OrderDetail"
 import ModalWindowWaiter from "../modalWindow/ModalWindow"
 import "./Order.scss";
 import { Redirect } from 'react-router-dom'
@@ -19,6 +19,7 @@ class ClientOrder extends React.Component {
             showBreakfast: true,
             showLunch: false,
             showModal: false,
+            showOrder: [],
             orderList: []
         };
         this.addToOrder = this.addToOrder.bind(this);
@@ -42,7 +43,8 @@ class ClientOrder extends React.Component {
                         {
                             this.state.showBreakfast ?
                                 <div>
-                                    <MenuQueenBreakfast addToOrder={this.addToOrder} />
+                                    <MenuQueenBreakfast updateItemProducts={this.updateProduct} addToOrder={this.addToOrder} />
+                                    {/* <MenuQueenBreakfast addToOrder={this.addToOrder} /> */}
                                 </div>
                                 : null
                         }

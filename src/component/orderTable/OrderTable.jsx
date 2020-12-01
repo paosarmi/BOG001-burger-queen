@@ -9,7 +9,7 @@ const OrderTable = ({ orderList }) => {
         console.log("Producto");
     }
 
-    const quantityProduct = () => {
+    /* const quantityProduct = () => {
         if (item.product !== item.product) {
             quantity == 1
             console.log("No existe")
@@ -18,7 +18,7 @@ const OrderTable = ({ orderList }) => {
             quantity = + quantity
             console.log("Existe")
         }
-    }
+    } */
 
     return (
         <div>
@@ -26,10 +26,10 @@ const OrderTable = ({ orderList }) => {
                 orderList.map(item => (
                     <div className="ItemTableContainer">
                         <div className="Product">
-                            <p>{item.product}}  </p>
+                            <p>{item.product}  </p>
                         </div>
                         <div className="Quantity">
-                            <p>{quantityProduct}</p>
+                            <p>{/* {quantityProduct} */}</p>
                         </div>
                         <div className="Price">
                             <p>...{item.price}</p>

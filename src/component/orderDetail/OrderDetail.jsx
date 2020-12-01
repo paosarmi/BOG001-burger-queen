@@ -10,9 +10,11 @@ class OrderDetail extends React.Component {
 
         super(props)
         this.state = {
+            displayModal: this.props.displayModal,
             redirect: false,
             orderList: this.props.orderList
         };
+
     }
 
     addToOrderList(order) {
@@ -33,7 +35,7 @@ class OrderDetail extends React.Component {
                     <p>Total    5</p>
                 </div>
                 <div className="Submit-container">
-                    <button className="Submit-order" onClick={this.showModal}>Enviar a cocina</button>
+                    <button className="Submit-order" onClick={this.state.displayModal}>Enviar a cocina</button>
                 </div >
             </div >
 
@@ -42,8 +44,6 @@ class OrderDetail extends React.Component {
     OrderState() {
         this.setState({ redirect: "/order-state" })
     }
-    showModal() {
-        this.props.showModal()
-    }
+
 }
 export default OrderDetail;

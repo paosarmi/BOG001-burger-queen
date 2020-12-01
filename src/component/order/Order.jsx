@@ -23,6 +23,7 @@ class ClientOrder extends React.Component {
             orderList: []
         };
         this.addToOrder = this.addToOrder.bind(this);
+        this.displayModal = this.displayModal.bind(this);
     }
 
 
@@ -60,11 +61,15 @@ class ClientOrder extends React.Component {
                         </div>
                     </div>
                     <div className="Total-order">
-                        <OrderDetail showModal={this.displayModal} orderList={this.state.orderList} />
+                        <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} />
                     </div>
-                    <div>
-                        <ModalWindowWaiter />
-                    </div>
+                    {
+                        this.state.showModal ?
+                            <div>
+                                <ModalWindowWaiter />
+                            </div>
+                            : null
+                    }
                 </div>
             </div>
         );
@@ -84,7 +89,11 @@ class ClientOrder extends React.Component {
         })
     }
     displayModal() {
-        console.log("displayModal");
+
+        this.setState({
+
+            showModal: true
+        })
     }
 
     addToOrder(product, price) {

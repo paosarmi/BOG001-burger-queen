@@ -29,7 +29,10 @@ class OrderDetail extends React.Component {
 
             <div className="Order-detail-container">
                 <div className="Order-products-container">
-                    <OrderTable orderList={this.state.orderList} />
+                    {
+                        orderList.map(item => (
+                            <OrderTable orderList={this.state.orderList} />))
+                    }
                 </div>
                 <div className="Order-total-container">
                     <p>Total    5</p>

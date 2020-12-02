@@ -8,7 +8,7 @@ const OrderTable = ({ orderList }) => {
     const addProduct = () => {
         console.log("Producto");
     }
-
+    
     /*     const quantityProduct = () => {
             if (item.product !== item.product) {
                 quantity == 1
@@ -23,7 +23,6 @@ const OrderTable = ({ orderList }) => {
     return (
         <div>
             {
-
                 <div className="ItemTableContainer">
                     <div className="Product">
                         <p>{item.product}  </p>
@@ -38,7 +37,6 @@ const OrderTable = ({ orderList }) => {
                         <TrashBucket />
                     </div>
                 </div>
-
             }
         </div>)
 

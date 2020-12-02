@@ -6,7 +6,7 @@ $font-color: #fffaed;
 $font-size-s: 20px;
 $font-size-m: 25px;
 
-.WindowContainer {
+/* .WindowContainer {
   display: flex;
   width: 557px;
   height: 400px;
@@ -14,8 +14,14 @@ $font-size-m: 25px;
   border: solid 2px $color-font-border;
   background-color: $background;
   border-radius: 50px;
-}
+} */
 
 .AllspaceModalContainer {
-  width: inherit;
+  display: flex;
+  width: 557px;
+  height: 400px;
+  justify-content: center;
+  border: solid 2px $color-font-border;
+  background-color: $background;
+  border-radius: 50px;
 }

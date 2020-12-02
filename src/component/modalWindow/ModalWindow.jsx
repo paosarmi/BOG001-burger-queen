@@ -11,26 +11,26 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
 
     const sendOrder = (order) => {
         db.collection("orderCollection").add(order)
-        //this.state.orderList = [];
+        this.state.orderList = [];
     }
 
     return (
         <div className="WindowContainer">
             <div className="AllspaceModalContainer">
                 <div className="ModalContainer">
-                    <div>
+                    <div className="Waiter-name-modal">
                         <p>Mesero: WaiterName</p>
                     </div>
-                    <div>
+                    <div className="Client-name">
                         <p>
                             Nombre del cliente:
-                    </p>
+                        </p>
                         <p>_____________________</p>
                     </div>
-                    <div>
+                    <div className="Order-detail">
                         <p>
                             Resumen de pedido
-                    </p>
+                        </p>
                     </div>
                     <button onClick={() => this.sendOrder({ orderList: this.state.orderList })} >Click</button>
                     <button>Click</button>

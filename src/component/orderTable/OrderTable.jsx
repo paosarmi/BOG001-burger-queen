@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import TrashBucket from "../trashBucket/TrashBucket"
 import "./OrderTable.scss";
+var ReactDOM = require('react-dom');
 
 const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
-    /*  const deleteChangeProduct = () => { */
-    deleteToOrder(product, price);
+    const deleteChangeProduct = () => {
+        deleteToOrder(product, price);
+    }
     return (
         <div>
             {
@@ -19,7 +21,7 @@ const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
                         <p>...${price}</p>
                     </div>
                     <div>
-                        <TrashBucket onClick={deleteToOrder} /* deleteToOrder={this.deleteToOrder} */ />
+                        <TrashBucket onClick={this.setState.deleteChangeProduct} /* deleteToOrder={this.deleteToOrder} */ />
                     </div>
                 </div>
             }

@@ -3,21 +3,21 @@
         "bebidas": [
             {
                 "product": "Café americano",
-                "price": "$5"
+                "price": 5
             },
             {
                 "product": "Café con leche",
-                "price": "$7"
+                "price": 7
             },
             {
                 "product": "Jugo de frutas natural",
-                "price": "$7"
+                "price": 7
             }
         ],
         "sandwich": [
             {
                 "product": "Sandwich de jamón y queso",
-                "price": "$10"
+                "price": 10
             }
         ]
     },
@@ -26,68 +26,68 @@
             "hamburguesaSimple": [
                 {
                     "option": "Res",
-                    "price": "$10"
+                    "price": 10
                 },
                 {
                     "option": "Pollo",
-                    "price": "$10"
+                    "price": 10
                 },
                 {
                     "option": "Vegetariana",
-                    "price": "$10"
+                    "price": 10
                 }
             ],
             "hamburguesaDoble": [
                 {
                     "option": "Res",
-                    "price": "$15"
+                    "price": 15
                 },
                 {
                     "option": "Pollo",
-                    "price": "$15"
+                    "price": 15
                 },
                 {
                     "option": "Vegetariana",
-                    "price": "$15"
+                    "price": 15
                 }
             ],
             "adicionales": [
                 {
                     "option": "Queso",
-                    "price": "$1"
+                    "price": 1
                 },
                 {
                     "option": "Huevo",
-                    "price": "$1"
+                    "price": 1
                 }
             ]
         },
         "acompañamientos": [
             {
                 "product": "Papas fritas",
-                "price": "$5"
+                "price": 5
             },
             {
                 "product": "Aros de cebolla",
-                "price": "$5"
+                "price": 5
             }
         ],
         "bebidas": [
             {
                 "product": "Agua 500ml",
-                "price": "$5"
+                "price": 5
             },
             {
                 "product": "Agua 750 ml",
-                "price": "$7"
+                "price": 7
             },
             {
                 "product": "Gaseosa 500ml",
-                "price": "$7"
+                "price": 7
             },
             {
                 "product": "Gaseosa 750 ml",
-                "price": "$10"
+                "price": 10
             }
         ]
     }

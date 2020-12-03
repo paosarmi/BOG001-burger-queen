@@ -20,7 +20,8 @@ class ClientOrder extends React.Component {
             showLunch: false,
             showModal: false,
             showOrder: [],
-            orderList: []
+            orderList: [],
+            total: 0
         };
         this.addToOrder = this.addToOrder.bind(this);
         this.displayModal = this.displayModal.bind(this);
@@ -61,7 +62,7 @@ class ClientOrder extends React.Component {
                         </div>
                     </div>
                     <div className="Total-order">
-                        <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} />
+                        <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} total={this.state.total} />
                     </div>
                     {
                         this.state.showModal ?
@@ -97,14 +98,24 @@ class ClientOrder extends React.Component {
     }
 
     addToOrder(product, price) {
+        let total = this.state.total;
         let _order = this.state.orderList;
-        _order.push({ product, price })
+        let item = _order.find(o => o.product === product);
+        if (item) {
+            item.quantity++;
+            total += parseInt(item.price);
+        } else {
+            _order.push({ product: product, price: price, quantity: 1 })
+            total += parseInt(price);
+        }
+
         //TODO agregar cantidad del producto al arreglo segun esta condiciones
         // Si NO hay otro producto igual en el orderList, se agrega el prodcuto con cantidad  en 1
         // De lo contrario, si HAY otro producto igual en el orderList, no se agrega uno nuevo y 
         // en su lugar se aumenta la cantidad +1 orderList[index].quantity++
         this.setState({
-            orderList: _order
+            orderList: _order,
+            total: total
         });
     }
 

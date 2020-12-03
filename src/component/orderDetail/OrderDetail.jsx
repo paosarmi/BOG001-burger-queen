@@ -17,10 +17,6 @@ class OrderDetail extends React.Component {
 
     }
 
-    addToOrderList(order) {
-        this.orderList.push(order);
-    }
-
     render() {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect} />
@@ -30,12 +26,14 @@ class OrderDetail extends React.Component {
             <div className="Order-detail-container">
                 <div className="Order-products-container">
                     {
-                        orderList.map(item => (
-                            <OrderTable orderList={this.state.orderList} />))
+                        this.state.orderList.map(item => (
+                            <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
+                        //validar si ya hay un componente con el mismo Key 
                     }
                 </div>
                 <div className="Order-total-container">
-                    <p>Total    5</p>
+                    <p>Total  ${this.props.total}
+                    </p>
                 </div>
                 <div className="Submit-container">
                     <button className="Submit-order" onClick={this.state.displayModal}>Enviar a cocina</button>

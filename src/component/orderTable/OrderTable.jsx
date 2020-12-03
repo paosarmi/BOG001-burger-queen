@@ -3,35 +3,20 @@ import { db } from "../../firebase";
 import TrashBucket from "../trashBucket/TrashBucket"
 import "./OrderTable.scss";
 
-const OrderTable = ({ orderList }) => {
-
-    const addProduct = () => {
-        console.log("Producto");
-    }
-    
-    /*     const quantityProduct = () => {
-            if (item.product !== item.product) {
-                quantity == 1
-                console.log("No existe")
-            }
-            else {
-                quantity = + quantity
-                console.log("Existe")
-            }
-        } */
+const OrderTable = ({ product, price, quantity }) => {
 
     return (
         <div>
             {
                 <div className="ItemTableContainer">
                     <div className="Product">
-                        <p>{item.product}  </p>
+                        <p>{product}  </p>
                     </div>
                     <div className="Quantity">
-                        <p>{quantityProduct}</p>
+                        <p>{quantity}</p>
                     </div>
                     <div className="Price">
-                        <p>...{item.price}</p>
+                        <p>...${price}</p>
                     </div>
                     <div>
                         <TrashBucket />

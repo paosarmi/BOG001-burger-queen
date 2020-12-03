@@ -14,7 +14,6 @@ class OrderDetail extends React.Component {
             redirect: false,
             orderList: this.props.orderList
         };
-
     }
 
     render() {
@@ -28,7 +27,6 @@ class OrderDetail extends React.Component {
                     {
                         this.state.orderList.map(item => (
                             <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
-                        //validar si ya hay un componente con el mismo Key 
                     }
                 </div>
                 <div className="Order-total-container">

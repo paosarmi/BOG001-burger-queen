@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import trash from "./basura.png";
 import "./TrashBucket.scss";
 
-function deleteProduct() {
-
-    //const deleteOrderList
-
+const deleteProduct = () => {
     return (
         <button>
             <img src={trash} alt="Loguito" className="trash" />

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { db } from "../../firebase";
 import TrashBucket from "../trashBucket/TrashBucket"
 import "./OrderTable.scss";
 
-const OrderTable = ({ product, price, quantity }) => {
-
+const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
+    /*  const deleteChangeProduct = () => { */
+    deleteToOrder(product, price);
     return (
         <div>
             {
@@ -19,12 +19,11 @@ const OrderTable = ({ product, price, quantity }) => {
                         <p>...${price}</p>
                     </div>
                     <div>
-                        <TrashBucket />
+                        <TrashBucket onClick={deleteToOrder} /* deleteToOrder={this.deleteToOrder} */ />
                     </div>
                 </div>
             }
         </div>)
 
 }
-
 export default OrderTable;

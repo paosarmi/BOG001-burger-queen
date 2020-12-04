@@ -60,7 +60,7 @@ class ClientOrder extends React.Component {
                         </div>
                     </div>
                     <div className="Total-order">
-                        <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} total={this.state.total} />
+                        <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} total={this.state.total} deleteToOrder={this.deleteToOrder} />
                     </div>
                     {
                         this.state.showModal ?
@@ -115,7 +115,7 @@ class ClientOrder extends React.Component {
         let total = this.state.total;
         let _order = this.state.orderList;
         let item = _order.find(o => o.product === product);
-        if (item.quantity > 2) {
+        if (item.quantity >= 2) {
             item.quantity--;
             total -= parseInt(item.price);
         } else {
@@ -123,8 +123,9 @@ class ClientOrder extends React.Component {
                 if (_order[i].product === product) {
                     _order.splice(i, 1);
                     total -= parseInt(price);
+                    break;
                 }
-                break;
+
             }
         }
         this.setState({

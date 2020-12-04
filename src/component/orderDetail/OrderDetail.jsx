@@ -12,7 +12,8 @@ class OrderDetail extends React.Component {
         this.state = {
             displayModal: this.props.displayModal,
             redirect: false,
-            orderList: this.props.orderList
+            orderList: this.props.orderList,
+            deleteToOrder: this.props.deleteToOrder
         };
     }
 
@@ -26,12 +27,15 @@ class OrderDetail extends React.Component {
                 <div className="Order-products-container">
                     {
                         this.state.orderList.map(item => (
-                            <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
+                            <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} deleteToOrder={this.state.deleteToOrder} />))
                     }
                 </div>
                 <div className="Order-total-container">
-                    <p>Total  ${this.props.total}
-                    </p>
+                    <div>Total </div>
+                    <div>
+                        ${this.props.total}
+                    </div>
+
                 </div>
                 <div className="Submit-container">
                     <button className="Submit-order" onClick={this.state.displayModal}>Enviar a cocina</button>

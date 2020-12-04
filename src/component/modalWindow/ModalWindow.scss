@@ -29,5 +29,6 @@ $font-size-m: 25px;
   border: solid 2px $color-font-border;
   background-color: $background;
   border-radius: 50px;
-  z-index: 1;
+  align-items: center;
+  color: $font-color;
 }

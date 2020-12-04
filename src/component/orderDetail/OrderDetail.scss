@@ -30,7 +30,8 @@ $font-button: #2b1207;
 
 .Order-total-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 20px 15px 20px;
   font-size: 20px;
   color: $font-color;

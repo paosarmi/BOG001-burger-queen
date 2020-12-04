@@ -23,7 +23,7 @@ class WaiterPersons extends React.Component {
     }
 
     order() {
-        this.setState({ redirect: "/order" })
+        this.setState({ redirect: "/order?waiter=" + this.props.person })
     }
 }
 

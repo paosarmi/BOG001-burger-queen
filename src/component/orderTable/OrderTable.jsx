@@ -4,8 +4,9 @@ import "./OrderTable.scss";
 var ReactDOM = require('react-dom');
 
 const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
+    console.log(deleteToOrder)
     const deleteChangeProduct = () => {
-        deleteToOrder(product, price);
+        this.state.deleteToOrder(product, price);
     }
     return (
         <div>
@@ -21,7 +22,7 @@ const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
                         <p>...${price}</p>
                     </div>
                     <div>
-                        <TrashBucket onClick={this.setState.deleteChangeProduct} /* deleteToOrder={this.deleteToOrder} */ />
+                        <TrashBucket onClick={deleteChangeProduct} /* deleteToOrder={this.deleteToOrder} */ />
                     </div>
                 </div>
             }

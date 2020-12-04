@@ -64,7 +64,7 @@ class ClientOrder extends React.Component {
                     </div>
                     {
                         this.state.showModal ?
-                            <div>
+                            <div className="Prueba">
                                 <ModalWindowWaiter />
                             </div>
                             : null

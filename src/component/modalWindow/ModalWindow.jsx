@@ -2,7 +2,7 @@ import React from "react";
 import { db } from "../../firebase";
 import "./ModalWindow.scss";
 
-const ModalWindowWaiter = ({ handleClose, show }) => {
+const ModalWindowWaiter = ({ handleClose, show, waiterName, product, price, quantity }) => {
 
     const showHideClassName = show ? "modal display-block" : "modal display-none";
     const waiterModal = () => {
@@ -19,7 +19,7 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
             <div className="AllspaceModalContainer">
                 <div className="Modal-container">
                     <div className="Waiter-name-modal">
-                        <p>Mesero: WaiterName</p>
+                        <p>Mesero: {waiterName}</p>
                     </div>
                     <div className="Client-name">
                         <p>
@@ -31,6 +31,17 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
                         <p>
                             Resumen de pedido
                         </p>
+                        <div className="ItemTableContainer">
+                            <div className="Product">
+                                <p>{product}  </p>
+                            </div>
+                            <div className="Quantity">
+                                <p>{quantity}</p>
+                            </div>
+                            <div className="Price">
+                                <p>...${price}</p>
+                            </div>
+                        </div>
                     </div>
                     <button onClick={() => this.sendOrder({ orderList: this.state.orderList })} >Click</button>
                     <button>Click</button>

@@ -65,7 +65,7 @@ class ClientOrder extends React.Component {
                     {
                         this.state.showModal ?
                             <div className="Prueba">
-                                <ModalWindowWaiter />
+                                <ModalWindowWaiter orderList={this.state.orderList} total={this.state.total} waiterName={this.person} />
                             </div>
                             : null
                     }

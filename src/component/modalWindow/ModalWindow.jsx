@@ -15,9 +15,9 @@ const ModalWindowWaiter = ({ handleClose, show }) => {
     }
 
     return (
-        <div className="WindowContainer">
+        <div className="Window-container">
             <div className="AllspaceModalContainer">
-                <div className="ModalContainer">
+                <div className="Modal-container">
                     <div className="Waiter-name-modal">
                         <p>Mesero: WaiterName</p>
                     </div>

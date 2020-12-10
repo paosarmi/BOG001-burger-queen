@@ -23,12 +23,12 @@ class ChefOption extends React.Component {
                 <div className="Intro-body">
                     <WoodLogo />
                     <div className="Options-chef">
-                        <div>
-                            <BackButton path="/" />
-                        </div>
                         <div className="PersonChef">
                             <ListChef person="Yara Greyjoy" />
                             <ListChef person="Melisandre Red" />
+                        </div>
+                        <div className="Button-back">
+                            <BackButton path="/" />
                         </div>
                     </div>
                 </div >

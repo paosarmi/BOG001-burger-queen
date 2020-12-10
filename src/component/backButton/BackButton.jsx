@@ -20,7 +20,7 @@ class BackPreviousPage extends React.Component {
         return (
             <Fragment>
                 <div className="Back-button-container">
-                    <button className="Back-button" onClick={() => this.goTo(this.path)}> Volver </button>
+                    <button className={`Back-button ${'/chef' ? "background-color" : "#eb5a44"}`} onClick={() => this.goTo(this.path)}> Volver </button>
                 </div>
             </Fragment>
         );

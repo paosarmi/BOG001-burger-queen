@@ -14,5 +14,16 @@ $font-size: 40px;
 }
 
 .Options-chef {
-  overflow-y: hidden;
+  display: flex;
+  margin-top: 211px;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+.Button-back {
+  margin-top: -500px;
+  display: flex;
 }

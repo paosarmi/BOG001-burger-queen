@@ -7,13 +7,14 @@ import MenuQueenLunch from "../menuQueenLunch/MenuQueenLunch";
 import OrderDetail from "../orderDetail/OrderDetail"
 import ModalWindowWaiter from "../modalWindow/ModalWindow"
 import "./Order.scss";
-import { Redirect } from 'react-router-dom'
+import { Redirect, useLocation } from 'react-router-dom'
 var ReactDOM = require('react-dom');
 
 class ClientOrder extends React.Component {
 
     constructor(props) {
         super(props)
+        let query = new URLSearchParams(this.props.location.search);
         this.state = {
             redirect: false,
             showBreakfast: true,
@@ -21,11 +22,14 @@ class ClientOrder extends React.Component {
             showModal: false,
             showOrder: [],
             orderList: [],
+            waiterName: query.get("waiter"),
             total: 0
         };
         this.addToOrder = this.addToOrder.bind(this);
         this.displayModal = this.displayModal.bind(this);
         this.deleteToOrder = this.deleteToOrder.bind(this);
+
+
     }
 
     render() {
@@ -59,13 +63,14 @@ class ClientOrder extends React.Component {
                             <BackButton path="/waiter" />
                         </div>
                     </div>
+
                     <div className="Total-order">
                         <OrderDetail displayModal={this.displayModal} orderList={this.state.orderList} total={this.state.total} deleteToOrder={this.deleteToOrder} />
                     </div>
                     {
                         this.state.showModal ?
                             <div className="Prueba">
-                                <ModalWindowWaiter orderList={this.state.orderList} total={this.state.total} waiterName={this.person} />
+                                <ModalWindowWaiter orderList={this.state.orderList} total={this.state.total} waiterName={this.state.waiterName} />
                             </div>
                             : null
                     }

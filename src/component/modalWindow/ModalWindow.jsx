@@ -1,16 +1,18 @@
 import React from "react";
 import { db } from "../../firebase";
 import "./ModalWindow.scss";
+import OrderTable from "../orderTable/OrderTable"
 
-const ModalWindowWaiter = ({ handleClose, show, waiterName, product, price, quantity }) => {
-
+const ModalWindowWaiter = (props, { show }) => {
+    console.log(props);
     const showHideClassName = show ? "modal display-block" : "modal display-none";
     const waiterModal = () => {
-        console.log("ventana modal")
-    }
 
-    const sendOrder = (order) => {
-        db.collection("orderCollection").add(order)
+    }
+    /*  { handleClose, show, waiterName, } */
+
+    const sendOrder = (orderList) => {
+        db.collection("orderCollection").add(orderList)
         this.state.orderList = [];
     }
 
@@ -19,7 +21,7 @@ const ModalWindowWaiter = ({ handleClose, show, waiterName, product, price, quan
             <div className="AllspaceModalContainer">
                 <div className="Modal-container">
                     <div className="Waiter-name-modal">
-                        <p>Mesero: {waiterName}</p>
+                        <p>Mesero: {props.waiterName}</p>
                     </div>
                     <div className="Client-name">
                         <p>
@@ -31,20 +33,13 @@ const ModalWindowWaiter = ({ handleClose, show, waiterName, product, price, quan
                         <p>
                             Resumen de pedido
                         </p>
-                        <div className="ItemTableContainer">
-                            <div className="Product">
-                                <p>{product}  </p>
-                            </div>
-                            <div className="Quantity">
-                                <p>{quantity}</p>
-                            </div>
-                            <div className="Price">
-                                <p>...${price}</p>
-                            </div>
-                        </div>
+                        {
+                            props.orderList.map(item => (
+                                <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
+                        }
                     </div>
-                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })} >Click</button>
                     <button>Click</button>
+                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })}>Click</button>
                 </div>
             </div>
         </div>

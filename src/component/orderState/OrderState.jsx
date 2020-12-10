@@ -2,6 +2,7 @@ import React from "react";
 import WoodLogo from "../woodLogo/WoodLogo"
 import BackButton from "../backButton/BackButton";
 import TableState from "./state.png"
+import { Redirect } from 'react-router-dom'
 import "./OrderState.scss";
 
 class OrderState extends React.Component {
@@ -33,9 +34,9 @@ class OrderState extends React.Component {
                 </div>
             </div>
         )
-        home() {
+        /* home() {
             this.setState({ redirect: "/" })
-        }
+        } */
     }
 }
 export default OrderState;

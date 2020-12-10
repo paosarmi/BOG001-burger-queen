@@ -13,7 +13,8 @@ class OrderDetail extends React.Component {
             displayModal: this.props.displayModal,
             redirect: false,
             orderList: this.props.orderList,
-            deleteToOrder: this.props.deleteToOrder
+            deleteToOrder: this.props.deleteToOrder,
+            trash: true,
         };
     }
 
@@ -27,7 +28,7 @@ class OrderDetail extends React.Component {
                 <div className="Order-products-container">
                     {
                         this.state.orderList.map(item => (
-                            <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} deleteToOrder={this.state.deleteToOrder} />))
+                            <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} deleteToOrder={this.state.deleteToOrder} trash={this.state.trash} />))
                     }
                 </div>
                 <div className="Order-total-container">

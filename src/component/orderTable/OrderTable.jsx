@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import trash from "./basura.png";
+import trashImg from "./basura.png";
 import "./OrderTable.scss";
 var ReactDOM = require('react-dom');
 
-const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
+const OrderTable = ({ product, price, quantity, deleteToOrder, trash }) => {
     const deleteChangeProduct = () => {
         deleteToOrder(product, price);
         console.log("delete");
@@ -22,9 +22,11 @@ const OrderTable = ({ product, price, quantity, deleteToOrder }) => {
                         <p>...${price}</p>
                     </div>
                     <div>
-                        <button onClick={deleteChangeProduct}>
-                            <img src={trash} alt="Loguito" className="trash" />
-                        </button>
+                        {trash ?
+                            <button className="Button-trash" onClick={deleteChangeProduct}>
+                                <img src={trashImg} alt="Loguito" className="trash" />
+                            </button>
+                            : ''}
                     </div>
                 </div>
             }

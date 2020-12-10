@@ -4,17 +4,20 @@ import "./ModalWindow.scss";
 import OrderTable from "../orderTable/OrderTable"
 
 const ModalWindowWaiter = (props, { show }) => {
-    console.log(props);
     const showHideClassName = show ? "modal display-block" : "modal display-none";
-    const waiterModal = () => {
-
-    }
-    /*  { handleClose, show, waiterName, } */
 
     const sendOrder = (orderList) => {
         db.collection("orderCollection").add(orderList)
-        this.state.orderList = [];
+        orderList = [];
     }
+
+    const trashButton = false;
+
+    /*  const waiterModal = () => {
+ 
+     } */
+    /*  { handleClose, show, waiterName, } */
+
 
     return (
         <div className="Window-container">
@@ -23,23 +26,23 @@ const ModalWindowWaiter = (props, { show }) => {
                     <div className="Waiter-name-modal">
                         <p>Mesero: {props.waiterName}</p>
                     </div>
-                    <div className="Client-name">
-                        <p>
-                            Nombre del cliente:
-                        </p>
-                        <p>_____________________</p>
+                    <div className="Client">
+                        <p> Nombre del cliente: </p>
+                        <input type="text" className="Name-client" />
                     </div>
-                    <div className="Order-detail">
-                        <p>
-                            Resumen de pedido
-                        </p>
+                    <div className="Order">
+                        <p>Resumen de pedido</p>
+                    </div>
+                    <div className="Order-detail-modal">
                         {
                             props.orderList.map(item => (
-                                <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
+                                <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} trash={trashButton} />))
                         }
                     </div>
-                    <button>Click</button>
-                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })}>Click</button>
+                    <div className="Buttons-containers">
+                        <button onClick={showHideClassName}>Cancelar</button>
+                        <button onClick={sendOrder}>Confirmar</button>
+                    </div>
                 </div>
             </div>
         </div>

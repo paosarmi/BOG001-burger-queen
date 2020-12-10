@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Menu from "../../menu.json";
+import jugo from "./jugo.png";
+import sandwich from "./sandwich.png"
 import "./MenuQueenBreakfast.scss";
 
 
@@ -22,12 +24,22 @@ const MenuQueenBreakfast = ({ addToOrder }) => {
             <div className="Items-container">
                 {
                     Menu.queenBreakfast.bebidas.map(item => (
-                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>{item.product}-{item.price} </button>
+
+                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
+                            <img src={jugo} alt="Img Jugo" />
+                            <div className="Content-item">{item.product}-{item.price}</div>
+                        </button>
+
                     ))
                 }
                 {
                     Menu.queenBreakfast.sandwich.map(item => (
-                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>{item.product}-{item.price} </button>
+
+                        <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
+                            <img src={sandwich} alt="Img Sandwich" />
+                            <div className="Content-item">{item.product}-{item.price}</div>
+                        </button>
+
                     ))
                 }
             </div>

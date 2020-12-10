@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Menu from "../../menu.json";
 import "./MenuQueenLunch.scss";
 
-const MenuQueenLunch = () => {
+const MenuQueenLunch = ({ addToOrder }) => {
 
     const initialStateProduct = {
         product: " ",
@@ -12,22 +12,20 @@ const MenuQueenLunch = () => {
 
     const orderDetailChange = eventAfterChange => {
         const { product, price } = eventAfterChange.target.dataset;
-
-        console.log(product, price);
+        setProduct(product, price);
+        addToOrder(product, price);
     }
 
     return (
         <div>
             <div className="Lunch-container">
                 <div>
-                    {/* <h1>Hamburguesas</h1>
-                    <br /> */}
                     <h2>Hamburguesa Simple</h2>
                 </div>
                 <div className="Title-items">
                     {
                         Menu.queenLunch.hamburguesas.hamburguesaSimple.map(item => (
-                            <button className="Item" onClick={orderDetailChange} data-product={item.option} data-price={item.price}>{item.option}-{item.price} </button>
+                            <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>{item.product}-{item.price} </button>
                         ))
                     }
                 </div>

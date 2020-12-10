@@ -55,7 +55,7 @@ class ClientOrder extends React.Component {
                         {
                             this.state.showLunch ?
                                 <div>
-                                    <MenuQueenLunch />
+                                    <MenuQueenLunch updateItemProducts={this.updateProduct} addToOrder={this.addToOrder} />
                                 </div>
                                 : null
                         }

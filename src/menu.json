@@ -25,29 +25,29 @@
         "hamburguesas": {
             "hamburguesaSimple": [
                 {
-                    "option": "Res",
+                    "product": "Hamburguesa simple de res",
                     "price": 10
                 },
                 {
-                    "option": "Pollo",
+                    "product": " Hamburguesa simple de pollo",
                     "price": 10
                 },
                 {
-                    "option": "Vegetariana",
+                    "product": "Hamburguesa simple vegetariana",
                     "price": 10
                 }
             ],
             "hamburguesaDoble": [
                 {
-                    "option": "Res",
+                    "option": "Hamburguesa doble de res",
                     "price": 15
                 },
                 {
-                    "option": "Pollo",
+                    "option": "Hamburguesa doble de pollo",
                     "price": 15
                 },
                 {
-                    "option": "Vegetariana",
+                    "option": "Hamburguesa doble vegetariana",
                     "price": 15
                 }
             ],

@@ -38,8 +38,8 @@ const ModalWindowWaiter = (props, { show }) => {
                                 <OrderTable key={item.product} product={item.product} price={item.price} quantity={item.quantity} />))
                         }
                     </div>
-                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })} >Click</button>
                     <button>Click</button>
+                    <button onClick={() => this.sendOrder({ orderList: this.state.orderList })}>Click</button>
                 </div>
             </div>
         </div>

@@ -1,3 +1,9 @@
+$waiter-background: #f6ab52;
+$chef-background: #eb5a44;
+$font-family: "Love Ya Like A Sister", cursive;
+$font-color-item: #fffaed;
+$font-size-button: 28px;
+
 .Items-container {
   display: flex;
   height: 390px;
@@ -13,4 +19,8 @@
   height: 145px;
   border-radius: 50px;
   border-style: none;
+  color: $font-color-item;
+  font-size: $font-size-button;
+  font-family: $font-family;
+  text-align: center;
 }

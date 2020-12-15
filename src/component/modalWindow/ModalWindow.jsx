@@ -2,7 +2,7 @@ import React from "react";
 import { db } from "../../firebase";
 import "./ModalWindow.scss";
 import OrderTable from "../orderTable/OrderTable"
-import { Redirect } from 'react-router-dom'
+//import { Redirect } from 'react-router-dom'
 
 const ModalWindowWaiter = (props) => {
 

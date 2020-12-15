@@ -26,8 +26,7 @@ const MenuQueenBreakfast = ({ addToOrder }) => {
                     Menu.queenBreakfast.bebidas.map(item => (
 
                         <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
-                            <img src={jugo} alt="Img Jugo" />
-                            <div className="Content-item">{item.product}-{item.price}</div>
+                            {item.product}-{item.price}
                         </button>
 
                     ))
@@ -36,8 +35,7 @@ const MenuQueenBreakfast = ({ addToOrder }) => {
                     Menu.queenBreakfast.sandwich.map(item => (
 
                         <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
-                            <img src={sandwich} alt="Img Sandwich" />
-                            <div className="Content-item">{item.product}-{item.price}</div>
+                            {item.product}-{item.price}
                         </button>
 
                     ))

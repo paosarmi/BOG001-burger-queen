@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Menu from "../../menu.json";
 import jugo from "./jugo.png"
+import hamburguesa from "./hamburguesa.png"
 import "./MenuQueenLunch.scss";
 
 const MenuQueenLunch = ({ addToOrder }) => {
@@ -27,8 +28,7 @@ const MenuQueenLunch = ({ addToOrder }) => {
                     {
                         Menu.queenLunch.hamburguesas.hamburguesaSimple.map(item => (
                             <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
-                                <img src="" alt="Img" />
-                                <div className="Content-item"> {item.product}-{item.price}</div>
+                                {item.product}-{item.price}
                             </button>
                         ))
                     }
@@ -38,8 +38,7 @@ const MenuQueenLunch = ({ addToOrder }) => {
                     {
                         Menu.queenLunch.hamburguesas.hamburguesaDoble.map(item => (
                             <button className="Item" onClick={orderDetailChange} data-product={item.option} data-price={item.price}>
-                                <img src="" alt="Img" />
-                                <div className="Content-item"> {item.option}-{item.price}</div>
+                                {item.option}-{item.price}
                             </button>
                         ))
                     }
@@ -49,8 +48,7 @@ const MenuQueenLunch = ({ addToOrder }) => {
                     {
                         Menu.queenLunch.hamburguesas.adicionales.map(item => (
                             <button className="Item" onClick={orderDetailChange} data-product={item.option} data-price={item.price}>
-                                <img src="" alt="Img" />
-                                <div className="Content-item"> {item.option}-{item.price}</div>
+                                {item.option}-{item.price}
                             </button>
                         ))
                     }
@@ -60,8 +58,7 @@ const MenuQueenLunch = ({ addToOrder }) => {
                     {
                         Menu.queenLunch.bebidas.map(item => (
                             <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
-                                <img src={jugo} alt="Img jugo" />
-                                <div className="Content-item">{item.product}-{item.price}</div>
+                                {item.product}-{item.price}
                             </button>
                         ))
                     }
@@ -71,8 +68,7 @@ const MenuQueenLunch = ({ addToOrder }) => {
                     {
                         Menu.queenLunch.acompañamientos.map(item => (
                             <button className="Item" onClick={orderDetailChange} data-product={item.product} data-price={item.price}>
-                                <img src="" alt="Img " />
-                                <div className="Content-item">{item.product}-{item.price}</div>
+                                {item.product}-{item.price}
                             </button>
                         ))
                     }

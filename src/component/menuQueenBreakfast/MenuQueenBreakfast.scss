@@ -16,20 +16,21 @@ $font-size-button: 25px;
 .Item {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(./buttonMenu.png);
   width: 270px;
   height: 145px;
   border-radius: 50px;
   border-style: none;
+  margin: 10px 10px;
   color: $font-color-item;
   font-size: $font-size-button;
   font-family: $font-family;
   text-align: center;
 }
 
-.Content-item {
+/* .Content-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 214px;
-}
+} */

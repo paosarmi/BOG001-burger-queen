@@ -102,7 +102,6 @@ class ClientOrder extends React.Component {
         this.setState({
             showModal: false
         })
-        console.log("Cerrar")
     }
 
     addToOrder(product, price) {

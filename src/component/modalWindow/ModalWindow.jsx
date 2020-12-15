@@ -4,10 +4,12 @@ import "./ModalWindow.scss";
 import OrderTable from "../orderTable/OrderTable"
 
 const ModalWindowWaiter = (props) => {
-    const sendOrder = (orderList) => {
-        db.collection("orderCollection").add(orderList)
-        orderList = [];
+
+    const sendOrder = (order) => {
+        db.collection("orderCollection").add()
+        props.orderList = [];
     }
+
     const trashButton = false;
 
     return (

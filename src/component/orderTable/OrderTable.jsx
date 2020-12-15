@@ -6,7 +6,6 @@ var ReactDOM = require('react-dom');
 const OrderTable = ({ product, price, quantity, deleteToOrder, trash }) => {
     const deleteChangeProduct = () => {
         deleteToOrder(product, price);
-        console.log("delete");
     }
     return (
         <div>

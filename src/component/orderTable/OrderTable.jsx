@@ -24,7 +24,7 @@ const OrderTable = ({ product, price, quantity, deleteToOrder, trash }) => {
                     <div>
                         {trash ?
                             <button className="Button-trash" onClick={deleteChangeProduct}>
-                                <img src={trashImg} alt="Loguito" className="trash" />
+                                <img src={trashImg} alt="Basura para eliminar productos del pedido" className="trash" />
                             </button>
                             : ''}
                     </div>

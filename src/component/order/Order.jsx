@@ -28,8 +28,7 @@ class ClientOrder extends React.Component {
         this.addToOrder = this.addToOrder.bind(this);
         this.displayModal = this.displayModal.bind(this);
         this.deleteToOrder = this.deleteToOrder.bind(this);
-
-
+        this.closeModal = this.closeModal.bind(this);
     }
 
     render() {
@@ -70,7 +69,7 @@ class ClientOrder extends React.Component {
                     {
                         this.state.showModal ?
                             <div className="Prueba">
-                                <ModalWindowWaiter orderList={this.state.orderList} total={this.state.total} waiterName={this.state.waiterName} />
+                                <ModalWindowWaiter orderList={this.state.orderList} total={this.state.total} waiterName={this.state.waiterName} closeModal={this.closeModal} />
                             </div>
                             : null
                     }
@@ -97,6 +96,13 @@ class ClientOrder extends React.Component {
         this.setState({
             showModal: true
         })
+    }
+
+    closeModal() {
+        this.setState({
+            showModal: false
+        })
+        console.log("Cerrar")
     }
 
     addToOrder(product, price) {

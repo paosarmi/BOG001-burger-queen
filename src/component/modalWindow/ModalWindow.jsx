@@ -3,21 +3,14 @@ import { db } from "../../firebase";
 import "./ModalWindow.scss";
 import OrderTable from "../orderTable/OrderTable"
 
-const ModalWindowWaiter = (props, { show }) => {
-    const showHideClassName = show ? "modal display-block" : "modal display-none";
+const ModalWindowWaiter = (props) => {
 
-    const sendOrder = (orderList) => {
-        db.collection("orderCollection").add(orderList)
-        orderList = [];
+    const sendOrder = (order) => {
+        db.collection("orderCollection").add()
+        props.orderList = [];
     }
 
     const trashButton = false;
-
-    /*  const waiterModal = () => {
- 
-     } */
-    /*  { handleClose, show, waiterName, } */
-
 
     return (
         <div className="Window-container">
@@ -40,12 +33,12 @@ const ModalWindowWaiter = (props, { show }) => {
                         }
                     </div>
                     <div className="Buttons-containers">
-                        <button onClick={showHideClassName}>Cancelar</button>
+                        <button onClick={props.closeModal}>Cancelar</button>
                         <button onClick={sendOrder}>Confirmar</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
